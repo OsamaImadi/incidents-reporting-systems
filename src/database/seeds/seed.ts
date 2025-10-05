@@ -1,0 +1,21 @@
+import 'dotenv/config';
+import { NestFactory } from '@nestjs/core';
+import { AppModule } from 'src/app.module';
+import { SeedService } from './seed.service';
+
+async function bootstrap() {
+  const app = await NestFactory.createApplicationContext(AppModule);
+  
+  const seedService = app.get(SeedService);
+  
+  try {
+    await seedService.runSeeds();
+  } catch (error) {
+    console.error('Seeding failed:', error);
+    process.exit(1);
+  } finally {
+    await app.close();
+  }
+}
+
+bootstrap();
