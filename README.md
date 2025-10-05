@@ -16,15 +16,12 @@ A comprehensive NestJS-based application for reporting and managing security inc
 
 ## 📋 Prerequisites
 
-### For Local Development (Without Docker)
+### For Local Development 
 - Node.js (v18 or higher)
 - npm or yarn
 - PostgreSQL (v15 or higher)
-- Redis (v7 or higher) - Optional
 
-### For Docker Development
-- Docker (v20.10 or higher)
-- Docker Compose (v2.0 or higher)
+
 
 ## 🛠️ Installation
 
